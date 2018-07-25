@@ -60,15 +60,15 @@ def run(my_songs)
   help
   loop do
     puts "Please enter a command:"
-    user_response = gets.downcase.chomp
-    case user_response
+    user_input = gets.downcase.chomp
+    case user_input
     when "exit"
       exit_jukebox
       break
     when "list"
-      list(songs)
+      list(my_songs)
     when "play"
-      play(songs)
+      play(my_songs)
     when "help"
       help
     else

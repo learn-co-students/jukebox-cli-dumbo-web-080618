@@ -29,8 +29,7 @@ def play(songs)
   user_input = gets.chomp
   if songs.include?(user_input)
     puts "Playing #{user_input}"
-  elsif
-    user_input.to_i.between?(1,9)
+  elsif user_input.to_i.between?(1,9)
       puts "Playing #{songs[user_input.to_i-1]}"
   else
     puts 'Invalid input, please try again'
@@ -45,8 +44,8 @@ def run(songs)
   help
   loop do
     puts "Please enter a command:"
-    user_response = gets.downcase.chomp
-    case user_response
+    user_input = gets.downcase.chomp
+    case user_input
     when "exit"
       exit_jukebox
       break
